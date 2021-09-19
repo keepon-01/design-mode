@@ -1,5 +1,7 @@
 package Proxy.v1;
 
+
+
 import java.util.Random;
 
 public class Tank implements moveable{
@@ -15,15 +17,15 @@ public class Tank implements moveable{
 
     }
     public  static void main(String args[]) {
-        new tankProxy(new Tank()).move();
+        new tankProxyTime(new Tank()).move();
     }
 }
 
 //前一个版本是为了解决这个计时的问题是通过tank2 extends tank解决的，但是继承这个方式耦合性太高。
-class tankProxy implements moveable{
+class tankProxyTime implements moveable{
     Tank tank;
 
-    public tankProxy(Tank tank) {
+    public tankProxyTime(Tank tank) {
         this.tank = tank;
     }
 
